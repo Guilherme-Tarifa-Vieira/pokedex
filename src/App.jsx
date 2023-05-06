@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import PokemonThumb from "./components/PokemonThumb";
 import { MdCatchingPokemon } from 'react-icons/md';
+import { SiPokemon } from 'react-icons/si';
+
 
 function App() {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -48,7 +50,7 @@ function App() {
       <div className="app-container">
         <div className="display">
           <MdCatchingPokemon size={48} className="poke" />
-          <h1><span className="span-red">P</span>okemon <span className="span-blue">e</span>volution</h1>
+          <SiPokemon className="poke" size={200} />
 
         </div>
         <div className="pokemon-container">
