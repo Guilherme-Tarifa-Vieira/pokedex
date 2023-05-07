@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import PokemonThumb from "./components/PokemonThumb";
-import { MdCatchingPokemon } from 'react-icons/md';
 import { SiPokemon } from 'react-icons/si';
 
 
 function App() {
   const [allPokemon, setAllPokemon] = useState([]);
-  const [loadMore, setLoadMore] = useState('https://pokeapi.co/api/v2/pokemon?limit=10000');
-  const [loadedPokemonCount, setLoadedPokemonCount] = useState(20);
+  const [loadedPokemonCount, setLoadedPokemonCount] = useState(0);
+  const [loadMore, setLoadMore] = useState(`https://pokeapi.co/api/v2/pokemon?limit=20&offset=${loadedPokemonCount}`);
+
+  const [noOffSet, setOffSet] = useState("https://pokeapi.co/api/v2/pokemon?limit=20");
 
   const getAllPokemons = async () => {
-    const res = await fetch(loadMore);
+    const res = await fetch(loadedPokemonCount > 0 ? loadMore : noOffSet);
     const data = await res.json();
 
     setLoadMore(data.next);
@@ -39,23 +40,24 @@ function App() {
 
   useEffect(() => {
     getAllPokemons();
-  }, []);
+  }, [loadedPokemonCount]);
 
   const handleLoadMoreClick = () => {
-    setLoadedPokemonCount(currentCount => currentCount + 20);
+    setLoadedPokemonCount(loadedPokemonCount + 20);
+
+    console.log(loadedPokemonCount)
   };
 
   return (
     <>
       <div className="app-container">
         <div className="display">
-          <MdCatchingPokemon size={48} className="poke" />
           <SiPokemon className="poke" size={200} />
 
         </div>
         <div className="pokemon-container">
           <div className="all-container">
-            {allPokemon.slice(0, loadedPokemonCount).map(pokemon => (
+            {allPokemon.slice(0, loadedPokemonCount + 20).map(pokemon => (
               <PokemonThumb
                 id={pokemon.id}
                 name={pokemon.name}

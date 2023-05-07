@@ -28,44 +28,71 @@ code {
     monospace;
 }
 
-.rock {
+.thumb-container.rock {
   background-color: rgb(148, 81, 81);
+  border-bottom: 10px solid rgb(107, 59, 59);
+
 }
 
-.ghost {
+.thumb-container.ghost {
   background-color: rgb(247, 247, 247);
+  border-bottom: 10px solid #ff9b89;
+
 }
 
-.electric {
+.thumb-container.electric {
   background-color: rgb(255, 255, 161);
+  border-bottom: 10px solid rgb(236, 236, 34);
+
+
 }
 
-.bug {
+.thumb-container.bug {
   background-color: #F6D6A7;
+  border-bottom: 10px solid #f1b965;
+
 }
 
-.poison {
+.thumb-container.poison {
   background-color: #e0a7f6;
+  border-bottom: 10px solid #b76ed3;
+
 }
 
-.normal {
+.thumb-container.normal {
   background-color: #F4F4F4;
+  border-bottom: 10px solid #292929;
+
 }
 
-.fairy {
+.thumb-container.fighting {
+
+  background-color: #faa89a;
+  border-bottom: 10px solid #c44029;
+}
+
+.thumb-container.fairy {
   background-color: rgba(255, 192, 203, 0.863);
+  border-bottom: 10px solid rgba(247, 158, 173, 0.863);
+
 }
 
-.fire {
-  background-color: #FBE3DF;
+.thumb-container.fire {
+  background-color: #fbeedf;
+  border-bottom: 10px solid #f5822b;
+
 }
 
-.grass {
+.thumb-container.grass {
   background-color: #E2F9E1;
+  border-bottom: 10px solid #77c474;
+
 }
 
-.water {
+.thumb-container.water {
   background-color: #E0F1FD;
+  border-bottom: 10px solid #71b1de;
+
 }
 
 .app-container {
@@ -77,8 +104,8 @@ code {
   padding: 3rem 3rem;
 }
 
-.display {
 
+.display {
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -166,25 +193,16 @@ h3 {
   background-color: rgba(0, 0, 0, 0.185);
 }
 
+
 .load-more {
 
-  border-radius: 2px;
-  border: 1px solid #c6c6c6;
-  color: #444;
-  padding: 0.8rem 0.8rem;
   min-width: 20%;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   cursor: pointer;
-
-}
-
-.load-more {
-  margin-top: 20px;
-  line-height: 60px;
   font-weight: bold;
   font-size: large;
   color: black;
-  padding: 0 40px;
+  padding: 1em 2.5em;
   background: lightblue;
   border: none;
   outline: none;
