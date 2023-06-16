@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@400;500;700;900&display=swap");
 
 :root {
-  --red-primary: #EF3F18;
+  --red-primary: #ef3f18;
   --red-seconday: #f05a39;
-  --yellow: #FFCB05;
-  --blue-border: #3B5CA7;
+  --yellow: #ffcb05;
+  --blue-border: #3b5ca7;
   --dark-color: #333333;
   --light-color: #f1f1f1;
 
   --font-defaut: "DM Sans", sans-serif;
-
 }
 
 body {
@@ -24,49 +22,41 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 .thumb-container.rock {
   background-color: rgb(148, 81, 81);
   border-bottom: 10px solid rgb(107, 59, 59);
-
 }
 
 .thumb-container.ghost {
   background-color: rgb(247, 247, 247);
   border-bottom: 10px solid #ff9b89;
-
 }
 
 .thumb-container.electric {
   background-color: rgb(255, 255, 161);
   border-bottom: 10px solid rgb(236, 236, 34);
-
-
 }
 
 .thumb-container.bug {
-  background-color: #F6D6A7;
+  background-color: #f6d6a7;
   border-bottom: 10px solid #f1b965;
-
 }
 
 .thumb-container.poison {
   background-color: #e0a7f6;
   border-bottom: 10px solid #b76ed3;
-
 }
 
 .thumb-container.normal {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   border-bottom: 10px solid #292929;
-
 }
 
 .thumb-container.fighting {
-
   background-color: #faa89a;
   border-bottom: 10px solid #c44029;
 }
@@ -74,25 +64,21 @@ code {
 .thumb-container.fairy {
   background-color: rgba(255, 192, 203, 0.863);
   border-bottom: 10px solid rgba(247, 158, 173, 0.863);
-
 }
 
 .thumb-container.fire {
   background-color: #fbeedf;
   border-bottom: 10px solid #f5822b;
-
 }
 
 .thumb-container.grass {
-  background-color: #E2F9E1;
+  background-color: #e2f9e1;
   border-bottom: 10px solid #77c474;
-
 }
 
 .thumb-container.water {
-  background-color: #E0F1FD;
+  background-color: #e0f1fd;
   border-bottom: 10px solid #71b1de;
-
 }
 
 .app-container {
@@ -104,7 +90,6 @@ code {
   padding: 3rem 3rem;
 }
 
-
 .display {
   display: flex;
   gap: 1rem;
@@ -114,14 +99,7 @@ code {
 
 .display .poke {
   color: var(--blue-border);
-
 }
-
-
-
-
-
-
 
 .pokemon-container {
   display: flex;
@@ -149,7 +127,10 @@ code {
   outline: none;
   min-width: 160px;
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.03) 0px 2px 1px, rgba(0, 0, 0, 0.03) 0px 4px 2px, rgba(0, 0, 0, 0.03) 0px 8px 4px, rgba(0, 0, 0, 0.03) 0px 16px 8px, rgba(0, 0, 0, 0.03) 0px 32px 16px;
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 2px 1px, rgba(0, 0, 0, 0.03) 0px 4px 2px,
+    rgba(0, 0, 0, 0.03) 0px 8px 4px, rgba(0, 0, 0, 0.03) 0px 16px 8px,
+    rgba(0, 0, 0, 0.03) 0px 32px 16px;
+  cursor: pointer;
 }
 
 .app-container h1 {
@@ -158,7 +139,6 @@ code {
 }
 
 h3 {
-
   margin-bottom: 0.3em;
 }
 
@@ -185,7 +165,7 @@ h3 {
 
 .detail-wrapper button {
   color: rgb(22, 22, 22);
-  padding: .5rem;
+  padding: 0.5rem;
   margin-top: 1rem;
   border: none;
   border-radius: 0.2rem;
@@ -193,9 +173,7 @@ h3 {
   background-color: rgba(0, 0, 0, 0.185);
 }
 
-
 .load-more {
-
   min-width: 20%;
   margin-top: 1.5rem;
   cursor: pointer;
